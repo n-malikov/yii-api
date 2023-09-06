@@ -21,6 +21,12 @@ use yii\behaviors\TimestampBehavior;
  */
 class Post extends \yii\db\ActiveRecord
 {
+
+    //public function fields()
+    //{
+    //    return ['id', 'title', 'body']; // только эти поля вернутся в запросе
+    //}
+
     /**
      * {@inheritdoc}
      */

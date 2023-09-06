@@ -2,7 +2,8 @@
 
 namespace frontend\controllers;
 
-use common\models\Post;
+use frontend\resource\Post;
+//use common\models\Post;
 use yii\rest\ActiveController;
 
 class PostController extends ActiveController
