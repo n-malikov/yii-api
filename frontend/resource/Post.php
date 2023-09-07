@@ -12,8 +12,16 @@ class Post extends \common\models\Post
 
     public function extraFields()
     {
-        // отобразятся только при добавлении в url expand=created_at
-        return ['created_at', 'createdBy'];
+        // отобразятся только при добавлении в url expand=comments или expand=comments.id
+        return ['comments', 'createdBy'];
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getComments()
+    {
+        // из наследуемого класса вынесли сюда, чтоб возвращались только те поля, что указаны в fields
+        return $this->hasMany(Comment::class, ['post_id' => 'id']);
+    }
 }

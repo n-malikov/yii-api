@@ -49,6 +49,10 @@ return [
             'rules' => [
                 // ['class' => UrlRule::class, 'controller' => ['p' => 'post']], // url: /posts => p
                 ['class' => UrlRule::class, 'controller' => ['post', 'comment']],
+                [
+                    'pattern' => 'posts/<postId:\d+>/comments',
+                    'route' => 'comment/index'
+                ]
             ],
         ],
     ],
